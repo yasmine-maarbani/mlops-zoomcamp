@@ -109,7 +109,7 @@ def train_best_model(
 
         mlflow.xgboost.log_model(booster, artifact_path="models_mlflow")
 
-                markdown__rmse_report = f"""# RMSE Report
+        markdown__rmse_report = f"""# RMSE Report
 
 ## Summary
 
