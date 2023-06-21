@@ -111,13 +111,13 @@ def train_best_model(
 
 @flow
 def main_flow(
-    train_path: str = "./data_2/green_tripdata_2023-01.parquet", 
-    val_path: str = "./data_2/green_tripdata_2023-02.parquet",
+    train_path: str = "03-orchestration/data_2/green_tripdata_2023-01.parquet", 
+    val_path: str = "03-orchestration/data_2/green_tripdata_2023-02.parquet",
 ) -> None:
     """The main training pipeline"""
 
     # MLflow settings
-    mlflow.set_tracking_uri("sqlite:///mlflow.db")
+    mlflow.set_tracking_uri("httpi://127.0.0.1:5000")
     mlflow.set_experiment("nyc-taxi-experiment-2")
 
     # Load
